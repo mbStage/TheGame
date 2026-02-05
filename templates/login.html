@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CTF Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>CTF ACCESS PORTAL</h1>
+        <span class="status">OFFLINE</span>
+    </header>
+
+    <section class="challenge">
+        <p class="question">
+            Unauthorized access is prohibited.<br>
+            Authenticate to proceed.
+        </p>
+
+        <form method="POST">
+            <input type="text" name="username" placeholder="USERNAME" required><br><br>
+            <input type="password" name="password" placeholder="PASSWORD" required><br><br>
+            <button type="submit">CONNECT</button>
+        </form>
+    </section>
+
+    <section class="log-console">
+        <div class="log-title">SYSTEM LOG</div>
+        <div class="log-content">
+            <p>[*] Initializing secure channel...</p>
+            <p>[*] Waiting for credentials</p>
+            <p>[!] Unauthorized attempts will be logged</p>
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>

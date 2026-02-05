@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CTF Completed</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>MISSION STATUS</h1>
+        <span class="status">COMPLETE</span>
+    </header>
+
+    <section class="challenge">
+        <p class="question">
+            🎉 ACCESS GRANTED 🎉<br><br>
+            All security layers have been breached.<br>
+            You successfully completed the CTF.
+        </p>
+
+        <form action="/logout">
+            <button type="submit">RESTART SIMULATION</button>
+        </form>
+    </section>
+
+    <section class="log-console">
+        <div class="log-title">FINAL LOG</div>
+        <div class="log-content">
+            <p>[+] Level 1 compromised</p>
+            <p>[+] Level 2 compromised</p>
+            <p>[+] Level 3 compromised</p>
+            <p>[+] Level 4 compromised</p>
+            <p>[+] Level 5 compromised</p>
+            <p>[✔] SYSTEM OWNED</p>
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>

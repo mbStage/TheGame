@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CTF Level {{ level }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>CTF :: LEVEL {{ level }}  :: {{ header }}</h1>
+        <span class="status">points: {{ user_points }} (nr. {{ user_rank }} out of {{ number_of_players }} players)CONNECTED</span>
+    </header>
+
+    <section class="challenge">
+        <pre class="question">{{ question|safe }}</pre> 
+        
+        <form method="POST">
+            <input type="text" name="flag" placeholder="ENTER FLAG..." required>
+            <button type="submit">SUBMIT</button>
+        </form>
+
+        <!-- Hint Section -->
+        <div class="hint-box">
+            <button class="hint-btn" onclick="toggleHint()">▶ Show Hint</button>
+            <div id="hint" class="hint-content">
+                <pre>{{ hint|safe }}</pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Log Console -->
+    <section class="log-console">
+        <div class="log-title">SYSTEM LOG</div>
+        <div class="log-content">
+            {{ logs|safe }}
+        </div>
+    </section>
+
+    <footer>
+        <a href="/logout">DISCONNECT</a>
+    </footer>
+
+</div>
+
+<script>
+function toggleHint() {
+    const hint = document.getElementById("hint");
+    const btn = document.querySelector(".hint-btn");
+
+    if (hint.style.display === "block") {
+        hint.style.display = "none";
+        btn.innerText = "▶ Show Hint";
+    } else {
+        hint.style.display = "block";
+        btn.innerText = "▼ Hide Hint";
+    }
+}
+</script>
+
+</body>
+</html>
+
