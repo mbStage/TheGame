@@ -2,12 +2,19 @@
 class points:
     def __init__(self):
 
-        ### create points file if it doesn't exist
+        ### create points and maxfile if it doesn't exist
         try:
             with open("points.log", "r") as f:
                 pass
         except FileNotFoundError:
             with open("points.log", "w") as f:
+                pass
+
+        try:
+            with open("maxlevel.txt", "r") as f:
+                pass
+        except FileNotFoundError:
+            with open("maxlevel.txt", "w") as f:
                 pass
 
     
