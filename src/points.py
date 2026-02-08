@@ -1,7 +1,15 @@
 
 class points:
     def __init__(self):
-        pass
+
+        ### create points file if it doesn't exist
+        try:
+            with open("points.log", "r") as f:
+                pass
+        except FileNotFoundError:
+            with open("points.log", "w") as f:
+                pass
+
     
     def get_maxlevel(self,user):
    
@@ -17,6 +25,7 @@ class points:
 
         else:
             return -1
+
 
 
     def add_points(self, user, points, level=None):

@@ -1,7 +1,14 @@
 class log :
     def __init__(self):
         import time
-        self.time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+        self.time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())    
+        ## create log file if it doesn't exist
+        try:
+            with open("log.log", "r") as f:
+                pass
+        except FileNotFoundError:
+            with open("log.log", "w") as f:
+                pass
 
 
     def log_log(self,user,message):
