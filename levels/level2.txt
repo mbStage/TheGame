@@ -2,8 +2,8 @@ PROJECT EULER
 
 ####QUESTION
 
-Hashtag nemt ... Nu til notesbogen og igen her har kreativiteten ikke været i top da koden da koden skulle bestemmet, 
-dog viser det sig, at objektet har sunde interesser, browseren på den netop eksponerede labtop er åben, og her man kan se, 
+Hashtag nemt ... Nu til notesbogen og igen her har kreativiteten ikke været i top da koden da koden skulle bestemmes, 
+dog viser det sig, at mistænkte har sunde interesser, browseren på den netop eksponerede labtop er åben, og her kan man se, 
 at mistænkte har besøgt project euler (stedet hvor man kan finde matematiske programmeringsproblmer) både opgave 1 <b>+</b> 2 
 er løst, kan summen af disse svar være løsningen på hængelåsen?
 

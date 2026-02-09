@@ -24,8 +24,8 @@
 
         <!-- Hint Section -->
         <div class="hint-box">
-            <button class="hint-btn" onclick="toggleHint()">▶ Show Hint</button>
-            <div id="hint" class="hint-content">
+            <button class="hint-btn" onclick="toggleHint()">{{ '▼ Hide Hint' if hint_shown else '▶ Show Hint' }}</button>
+            <div id="hint" class="hint-content" style="{{ 'display:block;' if hint_shown else 'display:none;' }}">
                 <pre>{{ hint|safe }}</pre>
             </div>
         </div>
@@ -56,6 +56,19 @@ function toggleHint() {
     } else {
         hint.style.display = "block";
         btn.innerText = "▼ Hide Hint";
+        // notify server that the hint was used (records log + points)
+        fetch("{{ url_for('hint_used') }}", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ level: {{ level }} })
+        }).then(res => res.json()).then(data => {
+            if (data.status !== 'ok') {
+                console.error('Hint logging error', data);
+            } else {
+                // reload to update log and points
+                window.location.reload();
+            }
+        }).catch(err => console.error('Hint logging failed', err));
     }
 }
 </script>

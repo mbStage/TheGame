@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, session, url_for
+from flask import Flask, render_template, request, redirect, session, url_for, jsonify
 import os
 from src.log import log
 from src.points import points
@@ -85,6 +85,7 @@ def level(level_id):
         question=level_data["question"],
         header=level_data["header"],
         hint=level_data["hint"],
+        hint_shown=session.get(f"hint_shown_{level_id}", False),
         logs=log_instance.print_log(session_username),
         number_of_players=points_instance.get_number_of_players(),
         user_points=points_instance.get_points(session_username),
@@ -96,7 +97,10 @@ def level(level_id):
 @app.route("/success")
 def success():
     if session.get("level") == 6:
-        return render_template("success.html")
+        return render_template("success.html",
+                               logs=log_instance.print_log(session.get("username")),
+                               scoreboard=points_instance.get_scoreboard()
+                               )
     return redirect(url_for("login"))
 
 
@@ -105,6 +109,42 @@ def logout():
     session.clear()
     return redirect(url_for("login"))
 
+
+@app.route("/hint_used", methods=["POST"])
+def hint_used():
+    if not session.get("logged_in"):
+        return jsonify({"status": "error", "message": "not_logged_in"}), 401
+
+    session_username = session.get("username", "UnknownUser")
+    data = request.get_json() or {}
+    level_id = data.get("level") or request.form.get("level")
+
+    # Log the hint usage in log.log
+    log_instance.log_log(session_username, f"Used hint on Level {level_id}")
+
+    # mark hint as shown for this level so page reload keeps it visible
+    try:
+        level_key = f"hint_shown_{level_id}"
+        session[level_key] = True
+    except Exception:
+        # fallback: mark current session level
+        session[f"hint_shown_{session.get('level')}"] = True
+
+    # Append a points entry (penalty) to points.log
+    points_instance.add_points(session_username, -5, level_id)
+    """
+    try:
+        with open("points.log", "a") as f:
+            f.write(f"{session_username} : -2\n")
+    except Exception as e:
+        log_instance.log_log(session_username, f"Failed to write points for hint: {e}")
+        return jsonify({"status": "error", "message": "points_write_failed"}), 500
+
+    """
+
+
+    return jsonify({"status": "ok"})
+    
 
 if __name__ == "__main__":
     app.run(debug=True)

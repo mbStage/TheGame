@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CTF Completed</title>
+    <title>CTF Completed, you are now root on the system</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -16,9 +16,16 @@
 
     <section class="challenge">
         <p class="question">
-            🎉 ACCESS GRANTED 🎉<br><br>
+            🎉 ACCESS GRANTED YOU ARE ROOT 🎉<br><br>
             All security layers have been breached.<br>
-            You successfully completed the CTF.
+            
+            Og det står nu klart, at vores hovedmistænkter er ingen ringere end ...<br><br>
+            
+            <strong>DIG</strong>!<br><br>
+
+            Tag dig sammen, og få tændt flammen i dit indre, for det er nu, du skal vise, hvad du og logen er lavet af!<br><br>
+
+            <strong>SES</strong><br><br>
         </p>
 
         <form action="/logout">
@@ -26,15 +33,18 @@
         </form>
     </section>
 
+    <!-- SCOREBOARD½ -->
+    <section class="scoreboard-console">
+        <div class="scoreboard-title">SCOREBOARD</div>
+        <div class="scoreboard-content">
+            {{ scoreboard|safe }}
+        </div>
+    </section>
+
     <section class="log-console">
         <div class="log-title">FINAL LOG</div>
         <div class="log-content">
-            <p>[+] Level 1 compromised</p>
-            <p>[+] Level 2 compromised</p>
-            <p>[+] Level 3 compromised</p>
-            <p>[+] Level 4 compromised</p>
-            <p>[+] Level 5 compromised</p>
-            <p>[✔] SYSTEM OWNED</p>
+            {{ logs|safe }}
         </div>
     </section>
 

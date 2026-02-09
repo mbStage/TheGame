@@ -38,12 +38,13 @@ class points:
     def add_points(self, user, points, level=None):
         #from src.log import log
         maxlevel = self.get_maxlevel(user)
-        print('maxlevel:', maxlevel)
+        #print('maxlevel:', maxlevel)
         if level is not None and level > maxlevel:
             with open("points.log", "a") as f:
                 points_entry = f"{user} : {points}\n"
                 f.write(points_entry)
 
+        print(f"Added points for user {user}: {points} points (Level: {level}, MaxLevel: {maxlevel})")
 
     def get_points(self, user_in=None):
         with open("points.log", "r") as f:
@@ -95,7 +96,13 @@ class points:
 
         # Sort users by points in descending order
         sorted_users = sorted(user_points.items(), key=lambda x: x[1], reverse=True)
-        return sorted_users
+        score_board = ''
+        rank = 1
+        for line in sorted_users:
+            score_board += f"<p>{rank}. {line[0]} : {line[1]}</p>"
+            rank += 1
+        
+        return score_board
     
     def get_number_of_players(self):
         with open("points.log", "r") as f:
