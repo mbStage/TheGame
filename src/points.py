@@ -100,6 +100,7 @@ class points:
         rank = 1
         for line in sorted_users:
             score_board += f"<p>{rank}. {line[0]} : {line[1]}</p>"
+            print(f"{rank}. {line[0]} : {line[1]}")
             rank += 1
         
         return score_board
