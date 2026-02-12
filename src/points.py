@@ -45,6 +45,7 @@ class points:
                 f.write(points_entry)
 
         print(f"Added points for user {user}: {points} points (Level: {level}, MaxLevel: {maxlevel})")
+        self.get_scoreboard() 
 
     def get_points(self, user_in=None):
         with open("points.log", "r") as f:
