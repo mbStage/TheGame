@@ -1,0 +1,34 @@
+{
+  "levels": {
+    "level1": {
+      "header": "🛡️ The Journey Begins",
+      "question": "<h2>🌍 The Knights Depart</h2><p>The four brave knights set out at <b>dawn</b> ☀️.</p><p>They find an ancient scroll that reads:</p><blockquote>✨ 'Follow the direction where the <b>stars guide you</b> at night.' ✨</blockquote><p>🧭 Which direction do they travel?</p>",
+      "answer": "bm9ydGg=",
+      "hint": "Rm9sbG93IHRoZSBzdGFycw=="
+    },
+    "level2": {
+      "header": "🏜️ The Rising Path",
+      "question": "<h2>🔥 Lost in the Desert</h2><p>The knights wander into a scorching desert 🏜️.</p><p>A glowing carving in the sand says:</p><blockquote>☀️ 'Move toward the land where the <b>sun awakens each day</b>.' ☀️</blockquote><p>😰 Which way should they go?</p>",
+      "answer": "ZWFzdA==",
+      "hint": "U3VuIHJpc2VzIGhlcmU="
+    },
+    "level3": {
+      "header": "❄️ The Frozen Trial",
+      "question": "<h2>🥶 A Land of Ice</h2><p>The knights enter a freezing wasteland ❄️.</p><p>They discover a rune carved in ice:</p><blockquote>🧊 'To survive, go the <b>opposite</b> way of where you first began.'</blockquote><p>🧠 Think carefully... which direction is it?</p>",
+      "answer": "c291dGg=",
+      "hint": "T3Bwb3NpdGUgb2Ygbm9ydGg="
+    },
+    "level4": {
+      "header": "🌊 The Final Horizon",
+      "question": "<h2>🚢 Edge of the World</h2><p>The knights arrive at a vast ocean 🌊.</p><p>An old sailor whispers:</p><blockquote>🌅 'Sail toward the place where the <b>sun disappears</b> beyond the horizon.'</blockquote><p>⛵ Which direction must they sail?</p>",
+      "answer": "d2VzdA==",
+      "hint": "V2hlcmUgdGhlIHN1biBzZXRz"
+    },
+    "level5": {
+      "header": "🏰 Saving the Lodge",
+      "question": "<h2>⚔️ The Final Test</h2><p>The knights return home, but the lodge is fading into legend...</p><p>A final inscription appears:</p><blockquote>✨ 'Only one thing can save the lodge from being forgotten.<br>It is what binds the four as <b>one</b>.' ✨</blockquote><p>❤️ What is the answer?</p>",
+      "answer": "dW5pdHk=",
+      "hint": "VG9nZXRoZXIgdGhleSBzdGFuZA=="
+    }
+  }
+}

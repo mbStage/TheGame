@@ -2,8 +2,6 @@ from flask import Flask, render_template, request, redirect, session, url_for, j
 import os
 from src.log import log
 from src.points import points
-import json
-import base64
 
 log_instance = log()
 points_instance = points()
@@ -16,20 +14,22 @@ app.secret_key = "super_secret_key"  # change in production
 number_of_levels = os.listdir('levels')
 
 LEVELS = {}
+for dirs in os.listdir('levels'):
+    with open(f'levels/{dirs}', 'r',encoding='utf-8') as f:
+        content = f.read().split('####')
+        header = content[0].strip().splitlines()
+        question = content[1].strip()[8:]
+        answer = content[2].strip().replace('\n', '')[6:]
+        hint = content[3].strip()[4:] if len(content) > 3 else "No hints available."
+        level_id  = int(dirs[-5:][0])
 
-with open('./levels/game_data.json', 'r', encoding='utf-8', errors='ignore') as f:
-    game_data = json.load(f)
-
-for level_key, level_info in game_data['levels'].items():
-    level_id = int(level_key.replace('level', ''))
     LEVELS[level_id] = {
-        "question": level_info['question'],
-        "flag": base64.b64decode(level_info['answer']).decode('utf-8'),
-        "header": level_info['header'],
-        "hint": base64.b64decode(level_info['hint']).decode('utf-8'),
-    }
+        "question": question,
+        "flag": answer,
+        "header": header[0] if header else f"Level {level_id}",
+        "hint": hint
+    }   
 
-print(f"Loaded {len(LEVELS)} levels: {list(LEVELS.keys())}")
 
 ##Store username as session variable upon login
 
@@ -39,27 +39,8 @@ def login():
         username = request.form["username"]
         password = request.form["password"]
 
-        
-
         # Simple login (for demo purposes)
-
-        with open('./passwords.txt', 'r') as f:
-            passwords = {}
-            for line in f:
-                if ':' in line:
-                    user, pwd = line.strip().split(':', 1)
-                    passwords[user.strip().lower()] = pwd.strip()
-        
-        print('passwords:', passwords)
-
-        #if username.lower() in ['pressi','cfo','hop','pp'] and password == "1967":
-        print(passwords[username.lower()])
-        is_valid_user = username.lower() in passwords.keys()
-        is_correct_password = password == passwords[username.lower()]
-
-        print(f"Login attempt for user '{username}': valid_user={is_valid_user}, correct_password={is_correct_password}")
-        
-        if is_valid_user and is_correct_password:
+        if username.lower() in ['pressi','cfo','hop','pp'] and password == "1967":
             session["logged_in"] = True
             session["level"] = 1
             session["username"] = username
