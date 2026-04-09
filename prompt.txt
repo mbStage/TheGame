@@ -1,0 +1,26 @@
+I have a framework which takes a json file and use this file as input to form a game. The game is inspired from escape/mystery rooms where each level holds a puzzel which should be solved to enter next level. Here is an example of the the json:
+{
+    "levels": {
+        "level1": {
+            "header": "🛡️ The Journey Begins",
+            "question": "<h2>🌍 The Knights Depart</h2><p>The four brave knights set out at <b>dawn</b> ☀️.</p><p>They find an ancient scroll that reads:</p><blockquote>✨ 'Follow the direction where the <b>stars guide you</b> at night.' ✨</blockquote><p>🧭 Which direction do they travel?</p>",
+            "answer": "bm9ydGg=",
+            "hint": "Rm9sbG93IHRoZSBzdGFycw=="
+            }
+        },
+        "level2": {
+            "header": "🏰 Saving the Lodge",
+            "question": "<h2>⚔️ The Final Test</h2><p>The knights return home, but the lodge is fading into legend...</p><p>A final inscription appears:</p><blockquote>✨ 'Only one thing can save the lodge from being forgotten.<br>It is what binds the four as <b>one</b>.' ✨</blockquote><p>❤️ What is the answer?</p>",
+            "answer": "dW5pdHk=",
+            "hint": "VG9nZXRoZXIgdGhleSBzdGFuZA=="
+        }
+    }
+}
+
+each level holds a header, a question, an answer and a hint to solve the puzzel. The answer and the hint should be returned as base64 encoded, such that no one can see the answer before playing. 
+Include html fomatting and emojiis to make the question more readable and funny
+
+The puzzels should follow a story of 4 knights travelling the world to save their lodge from being forgotten
+
+Return a new json including 5 levels starting from 1. 
+
