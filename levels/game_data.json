@@ -1,34 +1,34 @@
 {
   "levels": {
     "level1": {
-      "header": "🛡️ The Journey Begins",
-      "question": "<h2>🌍 The Knights Depart</h2><p>The four brave knights set out at <b>dawn</b> ☀️.</p><p>They find an ancient scroll that reads:</p><blockquote>✨ 'Follow the direction where the <b>stars guide you</b> at night.' ✨</blockquote><p>🧭 Which direction do they travel?</p>",
-      "answer": "bm9ydGg=",
-      "hint": "Rm9sbG93IHRoZSBzdGFycw=="
+      "header": "💖 A Crack in Paradise",
+      "question": "<h2>🏝️ Barbie & Ken's Perfect World?</h2><p>Barbie 👩‍🎀 and Ken 👱‍♂️ lived in harmony until one day, a mysterious voice whispered:</p><blockquote>✨ 'Even the strongest bonds weaken without a solid foundation.' ✨</blockquote><p>They discover a lock with a clue:</p><p>🧩 <b>'I am built slowly, broken quickly, and essential for love to last.'</b></p><p>💭 What must they restore first?</p>",
+      "answer": "dHJ1c3Q=",
+      "hint": "YmVsaWV2ZSBpbiBlYWNoIG90aGVy"
     },
     "level2": {
-      "header": "🏜️ The Rising Path",
-      "question": "<h2>🔥 Lost in the Desert</h2><p>The knights wander into a scorching desert 🏜️.</p><p>A glowing carving in the sand says:</p><blockquote>☀️ 'Move toward the land where the <b>sun awakens each day</b>.' ☀️</blockquote><p>😰 Which way should they go?</p>",
-      "answer": "ZWFzdA==",
-      "hint": "U3VuIHJpc2VzIGhlcmU="
+      "header": "🗣️ The Silent Divide",
+      "question": "<h2>🌫️ Lost in Misunderstanding</h2><p>A fog separates Barbie and Ken. They can see each other but cannot hear.</p><p>A glowing message appears:</p><blockquote>✨ 'Words unspoken build walls unseen.' ✨</blockquote><p>🧩 <b>'I flow between hearts and minds, clearing confusion when used.'</b></p><p>💬 What must they use to break the silence?</p>",
+      "answer": "Y29tbXVuaWNhdGlvbg==",
+      "hint": "dGFsayBvcGVubHk="
     },
     "level3": {
-      "header": "❄️ The Frozen Trial",
-      "question": "<h2>🥶 A Land of Ice</h2><p>The knights enter a freezing wasteland ❄️.</p><p>They discover a rune carved in ice:</p><blockquote>🧊 'To survive, go the <b>opposite</b> way of where you first began.'</blockquote><p>🧠 Think carefully... which direction is it?</p>",
-      "answer": "c291dGg=",
-      "hint": "T3Bwb3NpdGUgb2Ygbm9ydGg="
+      "header": "🪞 The Mirror of Truth",
+      "question": "<h2>🔍 Reflections Don't Lie</h2><p>The couple finds a magical mirror that only reveals reality.</p><p>It whispers:</p><blockquote>✨ 'Only those who face me without fear may pass.' ✨</blockquote><p>🧩 <b>'I may hurt at first, but I heal in the end.'</b></p><p>💡 What must they embrace?</p>",
+      "answer": "aG9uZXN0eQ==",
+      "hint": "dHJ1dGggbWF0dGVycw=="
     },
     "level4": {
-      "header": "🌊 The Final Horizon",
-      "question": "<h2>🚢 Edge of the World</h2><p>The knights arrive at a vast ocean 🌊.</p><p>An old sailor whispers:</p><blockquote>🌅 'Sail toward the place where the <b>sun disappears</b> beyond the horizon.'</blockquote><p>⛵ Which direction must they sail?</p>",
-      "answer": "d2VzdA==",
-      "hint": "V2hlcmUgdGhlIHN1biBzZXRz"
+      "header": "⏳ The Test of Time",
+      "question": "<h2>🌱 Growing Together</h2><p>Barbie and Ken must plant a magical flower 🌸 that only blooms under the right condition.</p><p>An inscription reads:</p><blockquote>✨ 'Rush me and I fade, nurture me and I flourish.' ✨</blockquote><p>🧩 <b>'I am the calm in waiting and the strength in enduring.'</b></p><p>🌼 What quality do they need?</p>",
+      "answer": "cGF0aWVuY2U=",
+      "hint": "d2FpdCBjYWxtbHk="
     },
     "level5": {
-      "header": "🏰 Saving the Lodge",
-      "question": "<h2>⚔️ The Final Test</h2><p>The knights return home, but the lodge is fading into legend...</p><p>A final inscription appears:</p><blockquote>✨ 'Only one thing can save the lodge from being forgotten.<br>It is what binds the four as <b>one</b>.' ✨</blockquote><p>❤️ What is the answer?</p>",
-      "answer": "dW5pdHk=",
-      "hint": "VG9nZXRoZXIgdGhleSBzdGFuZA=="
+      "header": "❤️ The Eternal Bond",
+      "question": "<h2>🌟 The Final Revelation</h2><p>Having overcome all trials, Barbie and Ken stand before a radiant gate.</p><p>The final message shines brightly:</p><blockquote>✨ 'I am the force that binds all, the reason for every trial, and the reward at the end.' ✨</blockquote><p>🧩 <b>'Without me, none of this matters.'</b></p><p>💖 What is the ultimate answer?</p>",
+      "answer": "bG92ZQ==",
+      "hint": "aXQgYmluZHMgYWxs"
     }
   }
 }
